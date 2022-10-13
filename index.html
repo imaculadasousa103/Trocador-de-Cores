@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color</title>
+    <style>
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+            color:black;
+            margin-left: 370px;
+            margin-right: 370px;
+            margin-top: 15%;
+            padding: 30px 60px 90px 30px;
+            background-color: aqua;
+            border-radius: 5px;
+        }
+
+        *{
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        
+        .rosa{
+            background-color: rgb(255, 0 , 32);
+            transition: all 0.25s ease-in-out;
+        }
+        .amarelo{
+            background-color: gold;
+            transition: all 0.25s ease-in-out;
+        }
+        .azul{
+            background-color: cornflowerblue;
+            transition: all 0.25s ease-in-out;
+        }
+        button{
+            padding: 5px 10px;
+            border: 0;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 22px;
+            font-weight: 500;
+            margin: 0 10px;
+        }
+        .but{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%, -50%);
+            min-width: 90vw;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Trocando de Cores</h1>
+
+    </header>
+    <section>
+        <div class="but">
+            <button class="rosa" id="btn-rosa">rosa</button>
+            <button class="amarelo" id="btn-amarelo">amarelo</button>
+            <button  class="azul" id="btn-azul">azul</button>
+        </div>
+    </section>
+    <script>
+       document.getElementById("btn-rosa").addEventListener ("click", function(){
+            document.querySelector("body").setAttribute("class","rosa");
+
+       })
+
+       document.getElementById("btn-amarelo").addEventListener ("click", function(){
+            document.querySelector("body").setAttribute("class","amarelo");
+
+       })
+       document.getElementById("btn-azul").addEventListener ("click", function(){
+            document.querySelector("body").setAttribute("class","azul");
+
+       })
+        
+    </script>
+</body>
+</html>
